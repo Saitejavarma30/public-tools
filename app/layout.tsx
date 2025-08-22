@@ -19,13 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        {/* Google AdSense */}
-        <Script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID || 'ca-pub-YOUR_PUBLISHER_ID'}`}
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7038543112980969"
+     crossorigin="anonymous"></script>
       </head>
       <body className={cn(inter.className, "min-h-screen bg-background font-sans antialiased")}>
         <div className="relative flex min-h-screen flex-col">
