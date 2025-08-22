@@ -1,5 +1,6 @@
 import { RegexTester } from '@/components/regex-tester'
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Free Online Regex Tester & Visualizer | Public Tools',
@@ -53,7 +54,9 @@ export default function RegexTesterPage() {
             Test, debug, and visualize your regular expressions with real-time highlighting and pattern matching.
           </p>
         </div>
-        <RegexTester />
+        <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
+          <RegexTester />
+        </Suspense>
       </div>
     </>
   )
