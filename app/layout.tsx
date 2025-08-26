@@ -19,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <script 
-          async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7038543112980969"
-          crossOrigin="anonymous"
-        ></script>
+        {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && (
+          <script 
+            async 
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}`}
+            crossOrigin="anonymous"
+          ></script>
+        )}
       </head>
       <body className={cn(inter.className, "min-h-screen bg-background font-sans antialiased")}>
         <div className="relative flex min-h-screen flex-col">
@@ -57,7 +59,8 @@ export default function RootLayout({
             <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
               <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
                 <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                  Built with ❤️ for developers. Free tools, supported by ads.
+                  Built with ❤️ for developers. Free tools, supported by ads. 
+                  <a href="/privacy" className="underline hover:text-foreground ml-1">Privacy Policy</a>
                 </p>
               </div>
             </div>

@@ -1,0 +1,13 @@
+# Allow AdSense crawler access
+User-agent: Mediapartners-Google
+Allow: /
+
+# General rules for other crawlers
+User-agent: *
+Allow: /
+
+# Disallow specific private folders if needed
+# Disallow: /private/
+# Disallow: /admin/
+
+Sitemap: https://www.freetoolcompany.com/sitemap.xml
