@@ -32,6 +32,7 @@ export function ImageConverter() {
   })
   const [isProcessing, setIsProcessing] = useState(false)
   const [convertingFormat, setConvertingFormat] = useState<string | null>(null)
+  const [selectedFormat, setSelectedFormat] = useState<string>('jpg')
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const formatFileSize = (bytes: number) => {
@@ -388,11 +389,14 @@ export function ImageConverter() {
             {supportedFormats.map(format => (
               <Button
                 key={format.extension}
-                onClick={() => handleConvert(format.extension)}
+                onClick={() => {
+                  setSelectedFormat(format.extension)
+                  handleConvert(format.extension)
+                }}
                 disabled={isProcessing}
-                variant={convertingFormat === format.extension ? "default" : "outline"}
+                variant={selectedFormat === format.extension ? "default" : "outline"}
                 className={`flex flex-col items-center p-4 h-auto transition-all duration-200 ${
-                  convertingFormat === format.extension 
+                  selectedFormat === format.extension 
                     ? "bg-primary text-primary-foreground border-primary shadow-lg scale-105" 
                     : "hover:border-primary/50"
                 }`}
@@ -404,7 +408,7 @@ export function ImageConverter() {
                     : format.name}
                 </span>
                 <span className={`text-xs text-center ${
-                  convertingFormat === format.extension 
+                  selectedFormat === format.extension 
                     ? "text-primary-foreground/80" 
                     : "text-muted-foreground"
                 }`}>
