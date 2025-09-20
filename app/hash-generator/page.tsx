@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Free online hash generator. Generate MD5, SHA-1, SHA-256, SHA-512 hashes and HMAC signatures. Text and file input support. Secure hashing algorithms.',
     type: 'website',
     url: 'https://freetoolcompany.com/hash-generator',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',

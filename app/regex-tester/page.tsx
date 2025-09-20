@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: 'Free online regex tester and visualizer. Test, debug, and visualize regular expressions instantly. Pattern matching, syntax highlighting, regex flags.',
     type: 'website',
     url: 'https://freetoolcompany.com/regex-tester',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',

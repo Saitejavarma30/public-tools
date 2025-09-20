@@ -1,0 +1,26 @@
+{
+  "name": "Public Tools - Free Developer Utilities",
+  "short_name": "Public Tools",
+  "description": "Free online developer tools: JSON parser, regex tester, Base64 encoder, URL encoder, hash generator, color picker",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["developer", "utilities", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}

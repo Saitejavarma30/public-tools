@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker. No registration required.',
     type: 'website',
     url: 'https://freetoolcompany.com',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',

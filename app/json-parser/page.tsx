@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Free online JSON parser and formatter. Validate JSON syntax, format/beautify JSON, minify JSON, convert JSON to CSV. No registration required.',
     type: 'website',
     url: 'https://freetoolcompany.com/json-parser',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',

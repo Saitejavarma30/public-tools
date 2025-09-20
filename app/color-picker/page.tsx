@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Free online color picker and converter. Convert between HEX, RGB, HSL, CMYK color formats. Generate color palettes, check accessibility contrast.',
     type: 'website',
     url: 'https://freetoolcompany.com/color-picker',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',

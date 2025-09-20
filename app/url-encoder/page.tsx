@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Free online URL encoder and decoder. Encode URLs, decode URLs, parse query parameters, analyze URL components. Percent encoding, URL validation.',
     type: 'website',
     url: 'https://freetoolcompany.com/url-encoder',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',

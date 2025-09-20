@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Free online Base64 encoder and decoder. Encode text, images, and files to Base64. Decode Base64 to text, images, files. URL-safe encoding support.',
     type: 'website',
     url: 'https://freetoolcompany.com/base64-encoder',
+    images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',
