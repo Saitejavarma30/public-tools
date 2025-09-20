@@ -4,20 +4,20 @@ import { AdBanner } from '@/components/ads'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Base64 Encoder | Public Tools',
-  description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker. No registration required. Instant results.',
-  keywords: 'free developer tools, online tools, json parser, regex tester, base64 encoder, url encoder, hash generator, color picker, developer utilities, web tools, coding tools, programming tools, json formatter, json validator, regex visualizer, base64 decoder, url decoder, md5 generator, sha256 generator, color converter, hex to rgb, rgb to hex, hsl converter, cmyk converter, free online tools, no registration, instant tools',
+  title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Image Converter | Public Tools',
+  description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker, image converter & compressor. No registration required. Instant results.',
+  keywords: 'free developer tools, online tools, json parser, regex tester, base64 encoder, url encoder, hash generator, color picker, image converter, image compressor, png to jpg, jpg to png, webp converter, avif converter, developer utilities, web tools, coding tools, programming tools, json formatter, json validator, regex visualizer, base64 decoder, url decoder, md5 generator, sha256 generator, color converter, hex to rgb, rgb to hex, hsl converter, cmyk converter, image optimization, free online tools, no registration, instant tools',
   openGraph: {
-    title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Base64 Encoder',
-    description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker. No registration required.',
+    title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Image Converter',
+    description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker, image converter & compressor. No registration required.',
     type: 'website',
     url: 'https://freetoolcompany.com',
     images: ['https://freetoolcompany.com/og-image.svg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Base64 Encoder',
-    description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker.',
+    title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Image Converter',
+    description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker, image converter & compressor.',
   },
   alternates: {
     canonical: 'https://freetoolcompany.com',
@@ -61,6 +61,12 @@ export default function HomePage() {
       description: "Pick colors and convert between HEX, RGB, HSL, CMYK formats",
       href: "/color-picker",
       icon: "🎨"
+    },
+    {
+      title: "Image Converter & Compressor",
+      description: "Convert between PNG, JPG, WebP, AVIF and compress images",
+      href: "/image-converter",
+      icon: "🖼️"
     }
   ]
 

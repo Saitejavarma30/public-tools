@@ -17,6 +17,7 @@ export function MobileNav() {
     { href: '/url-encoder', label: 'URL Encoder' },
     { href: '/hash-generator', label: 'Hash Generator' },
     { href: '/color-picker', label: 'Color Picker' },
+    { href: '/image-converter', label: 'Image Converter' },
     { href: '/privacy', label: 'Privacy' },
   ]
 
