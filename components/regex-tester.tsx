@@ -207,7 +207,7 @@ export function RegexTester() {
       {/* Top Banner Ad */}
       <div className="flex justify-center">
         <AdBanner 
-          dataAdSlot={process.env.NEXT_PUBLIC_AD_SLOT_BANNER_TOP || "1270349401"} 
+          dataAdSlot="1270349401" 
           className="mb-4"
         />
       </div>
@@ -303,7 +303,7 @@ export function RegexTester() {
       {/* Middle Ad */}
       <div className="flex justify-center my-6">
         <AdSquare 
-          dataAdSlot={process.env.NEXT_PUBLIC_AD_SLOT_SQUARE_MIDDLE || "1350240451"} 
+          dataAdSlot="1350240451" 
           className="mx-auto"
         />
       </div>

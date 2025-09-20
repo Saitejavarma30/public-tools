@@ -35,10 +35,7 @@ export function AdBanner({
     return () => clearTimeout(adTimeout);
   }, [])
 
-  // Only render if we have an adsense ID
-  if (!process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID) {
-    return null
-  }
+  // Always render for AdSense approval
 
   return (
     <div ref={adRef} className={`ad-container ${className}`}>
@@ -49,7 +46,7 @@ export function AdBanner({
           minHeight: 90,
           width: '100%' 
         }}
-        data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}
+        data-ad-client="ca-pub-7038543112980969"
         data-ad-slot={dataAdSlot}
         data-ad-format={dataAdFormat}
         data-full-width-responsive={dataFullWidthResponsive.toString()}

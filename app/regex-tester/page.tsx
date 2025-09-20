@@ -3,19 +3,22 @@ import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Free Online Regex Tester & Visualizer | Public Tools',
-  description: 'Test, debug, and visualize your regular expressions instantly with our free online regex tester. Supports flags, highlighting, and shareable links.',
-  keywords: 'regex tester, regular expression, regex validator, regex visualizer, pattern matching, developer tools',
+  title: 'Free Online Regex Tester & Visualizer - Test Regular Expressions | Public Tools',
+  description: 'Free online regex tester and visualizer. Test, debug, and visualize regular expressions instantly. Pattern matching, syntax highlighting, regex flags. No registration required.',
+  keywords: 'regex tester, regular expression tester, regex validator, regex visualizer, regex debugger, pattern matching, regex online, free regex tools, regex test, regex match, regex pattern, regex syntax, regex flags, regex global, regex multiline, regex case insensitive, regex cheatsheet, regex examples, regex tutorial, regex generator, regex builder, regex checker, regex matcher, regex finder, regex search, regex replace, regex split, regex online tool, regex tester online, regex visualizer online, developer tools, web tools, coding tools',
   openGraph: {
-    title: 'Free Online Regex Tester & Visualizer',
-    description: 'Test, debug, and visualize your regular expressions instantly with our free online regex tester.',
+    title: 'Free Online Regex Tester & Visualizer - Test Regular Expressions',
+    description: 'Free online regex tester and visualizer. Test, debug, and visualize regular expressions instantly. Pattern matching, syntax highlighting, regex flags.',
     type: 'website',
-    url: 'https://public-tools.dev/regex-tester',
+    url: 'https://freetoolcompany.com/regex-tester',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Online Regex Tester & Visualizer',
-    description: 'Test, debug, and visualize your regular expressions instantly.',
+    title: 'Free Online Regex Tester & Visualizer - Test Regular Expressions',
+    description: 'Free online regex tester and visualizer. Test, debug, and visualize regular expressions instantly.',
+  },
+  alternates: {
+    canonical: 'https://freetoolcompany.com/regex-tester',
   },
 }
 

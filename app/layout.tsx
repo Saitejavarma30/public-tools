@@ -3,12 +3,43 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import Script from 'next/script'
+import { MobileNav } from '@/components/mobile-nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Public Tools - Free Developer Utilities',
-  description: 'Free online developer tools including regex tester, JSON formatter, and more.',
+  title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Base64 Encoder | Public Tools',
+  description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker. No registration required. Instant results.',
+  keywords: 'free developer tools, online tools, json parser, regex tester, base64 encoder, url encoder, hash generator, color picker, developer utilities, web tools, coding tools, programming tools, json formatter, json validator, regex visualizer, base64 decoder, url decoder, md5 generator, sha256 generator, color converter, hex to rgb, rgb to hex, hsl converter, cmyk converter, free online tools, no registration, instant tools',
+  authors: [{ name: 'Public Tools' }],
+  creator: 'Public Tools',
+  publisher: 'Public Tools',
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://freetoolcompany.com',
+    siteName: 'Public Tools',
+    title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Base64 Encoder',
+    description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker. No registration required.',
+    images: [
+      {
+        url: 'https://freetoolcompany.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Public Tools - Free Developer Utilities',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Online Developer Tools - JSON Parser, Regex Tester, Base64 Encoder',
+    description: 'Free online developer tools: JSON parser & formatter, regex tester, Base64 encoder/decoder, URL encoder, hash generator, color picker.',
+    images: ['https://freetoolcompany.com/og-image.png'],
+  },
+  other: {
+    'google-adsense-account': 'ca-pub-7038543112980969',
+  },
 }
 
 export default function RootLayout({
@@ -19,38 +50,73 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && (
-          <script 
-            async 
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}`}
-            crossOrigin="anonymous"
-          ></script>
-        )}
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7038543112980969"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className={cn(inter.className, "min-h-screen bg-background font-sans antialiased")}>
         <div className="relative flex min-h-screen flex-col">
           <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container flex h-14 max-w-screen-2xl items-center">
-              <div className="mr-4 hidden md:flex">
-                <a className="mr-6 flex items-center space-x-2" href="/">
-                  <span className="hidden font-bold sm:inline-block">
+            <div className="container mx-auto px-4 flex h-14 max-w-7xl items-center justify-between">
+              <div className="flex items-center">
+                <a className="flex items-center space-x-2" href="/">
+                  <span className="font-bold text-lg">
                     Public Tools
                   </span>
                 </a>
-                <nav className="flex items-center space-x-6 text-sm font-medium">
-                  <a
-                    className="transition-colors hover:text-foreground/80 text-foreground"
-                    href="/regex-tester"
-                  >
-                    Regex Tester
-                  </a>
-                  <a
-                    className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                    href="/privacy"
-                  >
-                    Privacy
-                  </a>
-                </nav>
+              </div>
+              
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a
+                  className="transition-colors hover:text-foreground/80 text-foreground"
+                  href="/regex-tester"
+                >
+                  Regex Tester
+                </a>
+                <a
+                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                  href="/json-parser"
+                >
+                  JSON Parser
+                </a>
+                <a
+                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                  href="/base64-encoder"
+                >
+                  Base64 Tool
+                </a>
+                <a
+                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                  href="/url-encoder"
+                >
+                  URL Encoder
+                </a>
+                <a
+                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                  href="/hash-generator"
+                >
+                  Hash Generator
+                </a>
+                <a
+                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                  href="/color-picker"
+                >
+                  Color Picker
+                </a>
+                <a
+                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                  href="/privacy"
+                >
+                  Privacy
+                </a>
+              </nav>
+
+              {/* Mobile Navigation */}
+              <div className="md:hidden">
+                <MobileNav />
               </div>
             </div>
           </header>

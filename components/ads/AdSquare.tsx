@@ -28,10 +28,7 @@ export function AdSquare({ dataAdSlot, className = "" }: AdSquareProps) {
     return () => clearTimeout(adTimeout);
   }, [])
 
-  // Only render if we have an adsense ID
-  if (!process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID) {
-    return null
-  }
+  // Always render for AdSense approval
 
   return (
     <div ref={adRef} className={`ad-container ${className}`}>
@@ -42,7 +39,7 @@ export function AdSquare({ dataAdSlot, className = "" }: AdSquareProps) {
           width: '300px', 
           height: '250px' 
         }}
-        data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}
+        data-ad-client="ca-pub-7038543112980969"
         data-ad-slot={dataAdSlot}
       />
     </div>

@@ -10,4 +10,4 @@ Allow: /
 # Disallow: /private/
 # Disallow: /admin/
 
-Sitemap: https://www.freetoolcompany.com/sitemap.xml
+Sitemap: https://freetoolcompany.com/sitemap.xml
