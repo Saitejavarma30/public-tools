@@ -84,7 +84,8 @@ export function ImageConverter() {
     targetFormat: string, 
     quality: number = 80,
     width?: number,
-    height?: number
+    height?: number,
+    maintainAspectRatio: boolean = true
   ): Promise<Blob> => {
     return new Promise((resolve, reject) => {
       const canvas = document.createElement('canvas')
@@ -96,7 +97,7 @@ export function ImageConverter() {
 
         // Calculate new dimensions if resizing is requested
         if (width || height) {
-          if (conversionSettings.maintainAspectRatio) {
+          if (maintainAspectRatio) {
             const aspectRatio = imgWidth / imgHeight
             if (width && !height) {
               imgHeight = width / aspectRatio
@@ -125,13 +126,20 @@ export function ImageConverter() {
         ctx?.drawImage(img, 0, 0, imgWidth, imgHeight)
 
         // Convert to target format
-        const mimeType = `image/${targetFormat.toLowerCase()}`
+        let mimeType = `image/${targetFormat.toLowerCase()}`
+        
+        // Fix common MIME type issues
+        if (targetFormat.toLowerCase() === 'jpg') {
+          mimeType = 'image/jpeg'
+        }
         canvas.toBlob(
           (blob) => {
             if (blob) {
+              console.log(`Successfully converted to ${mimeType}, size: ${blob.size} bytes`)
               resolve(blob)
             } else {
-              reject(new Error('Conversion failed'))
+              console.error(`Failed to convert to ${mimeType}`)
+              reject(new Error(`Conversion to ${mimeType} failed`))
             }
           },
           mimeType,
@@ -142,7 +150,7 @@ export function ImageConverter() {
       img.onerror = () => reject(new Error('Failed to load image'))
       img.src = imageFile.preview
     })
-  }, [conversionSettings.maintainAspectRatio])
+  }, [])
 
   const processImage = useCallback(async (imageFile: ImageFile, targetFormat: string) => {
     try {
@@ -151,7 +159,8 @@ export function ImageConverter() {
         targetFormat, 
         conversionSettings.quality,
         conversionSettings.width,
-        conversionSettings.height
+        conversionSettings.height,
+        conversionSettings.maintainAspectRatio
       )
       
       const url = URL.createObjectURL(blob)
@@ -169,16 +178,24 @@ export function ImageConverter() {
   }, [convertImage, conversionSettings])
 
   const handleConvert = useCallback(async (targetFormat: string) => {
+    if (images.length === 0) {
+      alert('Please upload some images first!')
+      return
+    }
+    
     setIsProcessing(true)
     
     try {
+      console.log(`Converting ${images.length} images to ${targetFormat}...`)
       const updatedImages = await Promise.all(
         images.map(image => processImage(image, targetFormat))
       )
       
       setImages(updatedImages)
+      console.log('Conversion completed successfully!')
     } catch (error) {
       console.error('Batch conversion error:', error)
+      alert('Conversion failed. Please try again.')
     } finally {
       setIsProcessing(false)
     }
@@ -367,7 +384,9 @@ export function ImageConverter() {
                 className="flex flex-col items-center p-4 h-auto"
               >
                 <FileImage className="h-6 w-6 mb-2" />
-                <span className="font-medium">{format.name}</span>
+                <span className="font-medium">
+                  {isProcessing ? 'Converting...' : format.name}
+                </span>
                 <span className="text-xs text-muted-foreground text-center">
                   {format.description}
                 </span>
