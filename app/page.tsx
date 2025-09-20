@@ -106,6 +106,15 @@ export default function HomePage() {
           className="max-w-4xl"
         />
       </div>
+
+      {/* SEO Footer */}
+      <div className="mt-16 text-center text-sm text-muted-foreground">
+        <p>All tools are free to use with no registration required.</p>
+        <p className="mt-2">
+          <a href="/sitemap.xml" className="hover:text-primary transition-colors">Sitemap</a> • 
+          <a href="/privacy" className="hover:text-primary transition-colors ml-2">Privacy Policy</a>
+        </p>
+      </div>
     </div>
   )
 }
