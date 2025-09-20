@@ -36,7 +36,7 @@ export function UrlEncoderDescription() {
         <p className="text-sm text-muted-foreground">
           Common characters and their URL-encoded equivalents:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
           <div className="flex items-center gap-3 p-2 bg-muted rounded">
             <code className="font-mono text-sm bg-background px-2 py-1 rounded min-w-[3rem] text-center"> </code>
             <code className="font-mono text-sm bg-background px-2 py-1 rounded min-w-[3rem] text-center">%20</code>

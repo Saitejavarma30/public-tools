@@ -50,7 +50,7 @@ export default function RegexTesterPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 overflow-x-hidden">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight mb-2">
             Regex Tester & Visualizer

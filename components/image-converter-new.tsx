@@ -255,7 +255,7 @@ export function ImageConverter() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl space-y-6">
+    <div className="container mx-auto px-4 py-8 max-w-7xl space-y-6 overflow-x-hidden">
       {/* Top Banner Ad */}
       <div className="flex justify-center">
         <AdBanner 
@@ -385,7 +385,7 @@ export function ImageConverter() {
       {images.length > 0 && (
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Convert To</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
             {supportedFormats.map(format => (
               <Button
                 key={format.extension}
@@ -444,7 +444,7 @@ export function ImageConverter() {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {images.map((image, index) => (
               <div key={index} className="border border-border rounded-lg p-4 space-y-3">
                 <div className="aspect-square bg-muted rounded-lg overflow-hidden">

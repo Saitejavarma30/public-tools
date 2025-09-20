@@ -51,7 +51,7 @@ export default function ColorPickerPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="container mx-auto px-4 py-8 max-w-7xl overflow-x-hidden">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight mb-2">
             Color Picker & Converter

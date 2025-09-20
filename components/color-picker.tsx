@@ -281,7 +281,7 @@ export function ColorPicker() {
           {/* Preset Colors */}
           <div className="space-y-2">
             <label className="text-sm font-medium">Preset Colors</label>
-            <div className="grid grid-cols-10 gap-2">
+            <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2">
               {presetColors.map((color, index) => (
                 <button
                   key={index}
@@ -321,7 +321,7 @@ export function ColorPicker() {
           {/* RGB */}
           <div className="space-y-2">
             <label className="text-sm font-medium">RGB</label>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Input
                 type="number"
                 value={colorFormats.rgb.r}
@@ -359,7 +359,7 @@ export function ColorPicker() {
           {/* HSL */}
           <div className="space-y-2">
             <label className="text-sm font-medium">HSL</label>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Input
                 type="number"
                 value={colorFormats.hsl.h}
@@ -463,7 +463,7 @@ export function ColorPicker() {
               </Button>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {palette.map((color, index) => (
                 <div key={index} className="space-y-2">
                   <div

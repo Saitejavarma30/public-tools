@@ -346,7 +346,7 @@ export function Base64Encoder() {
 
       {/* Statistics */}
       {encodedText && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-muted rounded-md">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-muted rounded-md">
           <div className="text-center">
             <div className="text-2xl font-bold">{encodedText.length}</div>
             <div className="text-xs text-muted-foreground">Encoded Length</div>

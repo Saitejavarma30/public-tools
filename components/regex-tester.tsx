@@ -233,7 +233,7 @@ export function RegexTester() {
       {/* Flags */}
       <div className="space-y-2">
         <label className="text-sm font-medium">Flags</label>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-2 sm:gap-4">
           {Object.entries(flags).map(([key, value]) => {
             const flagLabels: Record<string, string> = {
               global: 'Global (g)',

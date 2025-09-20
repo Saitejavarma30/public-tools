@@ -64,10 +64,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
       </head>
-      <body className={cn(inter.className, "min-h-screen bg-background font-sans antialiased")}>
-        <div className="relative flex min-h-screen flex-col">
+      <body className={cn(inter.className, "min-h-screen bg-background font-sans antialiased overflow-x-hidden")}>
+        <div className="relative flex min-h-screen flex-col overflow-x-hidden">
           <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container mx-auto px-4 flex h-14 max-w-7xl items-center justify-between">
+            <div className="container mx-auto px-4 flex h-14 max-w-7xl items-center justify-between overflow-x-hidden">
               <div className="flex items-center">
                 <a className="flex items-center space-x-2" href="/">
                   <img 
@@ -90,7 +90,7 @@ export default function RootLayout({
               </div>
             </div>
           </header>
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 overflow-x-hidden">{children}</main>
           <footer className="border-t border-border/40 py-6 md:py-0">
             <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
               <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">

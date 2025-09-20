@@ -34,8 +34,8 @@ export function MobileNav() {
       </Button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-background border-b border-border/40 shadow-lg md:hidden">
-          <nav className="container mx-auto px-4 py-4 space-y-2">
+        <div className="absolute top-full left-0 right-0 bg-background border-b border-border/40 shadow-lg md:hidden overflow-x-hidden">
+          <nav className="container mx-auto px-4 py-4 space-y-2 overflow-x-hidden">
             {navigationItems.map((item) => {
               const isActive = pathname === item.href
               return (
