@@ -1,11 +1,11 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="90" cy="90" r="90" fill="#3b82f6"/>
-  <circle cx="90" cy="90" r="68" fill="white" opacity="0.9"/>
-  <circle cx="90" cy="90" r="45" fill="#3b82f6"/>
-  <rect x="78" y="45" width="24" height="24" fill="white" opacity="0.9"/>
-  <rect x="78" y="111" width="24" height="24" fill="white" opacity="0.9"/>
-  <rect x="45" y="78" width="24" height="24" fill="white" opacity="0.9"/>
-  <rect x="111" y="78" width="24" height="24" fill="white" opacity="0.9"/>
-  <rect x="111" y="72" width="48" height="12" fill="white" opacity="0.9" rx="6"/>
-  <rect x="147" y="66" width="12" height="36" fill="white" opacity="0.9" rx="6"/>
+  <circle cx="90" cy="90" r="90" fill="#ffffff"/>
+  <circle cx="90" cy="90" r="68" fill="#000000"/>
+  <circle cx="90" cy="90" r="45" fill="#ffffff"/>
+  <rect x="78" y="45" width="24" height="24" fill="#000000"/>
+  <rect x="78" y="111" width="24" height="24" fill="#000000"/>
+  <rect x="45" y="78" width="24" height="24" fill="#000000"/>
+  <rect x="111" y="78" width="24" height="24" fill="#000000"/>
+  <rect x="111" y="72" width="48" height="12" fill="#000000" rx="6"/>
+  <rect x="147" y="66" width="12" height="36" fill="#000000" rx="6"/>
 </svg>

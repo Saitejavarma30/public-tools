@@ -1,34 +1,34 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="1200" height="630" fill="#111827"/>
+  <rect width="1200" height="630" fill="#000000"/>
   
   <!-- Gradient Overlay -->
   <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#gradient)"/>
   
   <!-- Logo -->
   <g transform="translate(400, 200)">
-    <circle cx="80" cy="80" r="80" fill="#3b82f6"/>
-    <circle cx="80" cy="80" r="60" fill="white" opacity="0.9"/>
-    <circle cx="80" cy="80" r="40" fill="#3b82f6"/>
+    <circle cx="80" cy="80" r="80" fill="#ffffff"/>
+    <circle cx="80" cy="80" r="60" fill="#000000"/>
+    <circle cx="80" cy="80" r="40" fill="#ffffff"/>
     
     <!-- Gear teeth -->
-    <rect x="70" y="20" width="20" height="20" fill="white" opacity="0.9"/>
-    <rect x="70" y="120" width="20" height="20" fill="white" opacity="0.9"/>
-    <rect x="20" y="70" width="20" height="20" fill="white" opacity="0.9"/>
-    <rect x="120" y="70" width="20" height="20" fill="white" opacity="0.9"/>
+    <rect x="70" y="20" width="20" height="20" fill="#000000"/>
+    <rect x="70" y="120" width="20" height="20" fill="#000000"/>
+    <rect x="20" y="70" width="20" height="20" fill="#000000"/>
+    <rect x="120" y="70" width="20" height="20" fill="#000000"/>
     
     <!-- Wrench handle -->
-    <rect x="100" y="60" width="40" height="10" fill="white" opacity="0.9" rx="5"/>
-    <rect x="130" y="50" width="10" height="30" fill="white" opacity="0.9" rx="5"/>
+    <rect x="100" y="60" width="40" height="10" fill="#000000" rx="5"/>
+    <rect x="130" y="50" width="10" height="30" fill="#000000" rx="5"/>
   </g>
   
   <!-- Text -->
   <text x="600" y="300" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle">Public Tools</text>
-  <text x="600" y="360" font-family="Arial, sans-serif" font-size="24" fill="#99a3af" text-anchor="middle">Free Online Developer Tools</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="24" fill="#cccccc" text-anchor="middle">Free Online Developer Tools</text>
 </svg>
