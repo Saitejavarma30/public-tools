@@ -1,5 +1,6 @@
 
 import { Base64Encoder } from '@/components/base64-encoder'
+import { Base64EncoderDescription } from '@/components/base64-encoder-description'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -62,6 +63,7 @@ export default function Base64EncoderPage() {
         <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
           <Base64Encoder />
         </Suspense>
+        <Base64EncoderDescription />
       </div>
     </>
   )

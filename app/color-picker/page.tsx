@@ -1,5 +1,6 @@
 
 import { ColorPicker } from '@/components/color-picker'
+import { ColorPickerDescription } from '@/components/color-picker-description'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -62,6 +63,7 @@ export default function ColorPickerPage() {
         <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
           <ColorPicker />
         </Suspense>
+        <ColorPickerDescription />
       </div>
     </>
   )

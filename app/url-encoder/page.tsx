@@ -1,5 +1,6 @@
 
 import { UrlEncoder } from '@/components/url-encoder'
+import { UrlEncoderDescription } from '@/components/url-encoder-description'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -62,6 +63,7 @@ export default function UrlEncoderPage() {
         <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
           <UrlEncoder />
         </Suspense>
+        <UrlEncoderDescription />
       </div>
     </>
   )

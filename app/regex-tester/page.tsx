@@ -1,4 +1,5 @@
 import { RegexTester } from '@/components/regex-tester'
+import { RegexTesterDescription } from '@/components/regex-tester-description'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -61,6 +62,7 @@ export default function RegexTesterPage() {
         <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
           <RegexTester />
         </Suspense>
+        <RegexTesterDescription />
       </div>
     </>
   )

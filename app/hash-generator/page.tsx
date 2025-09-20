@@ -1,5 +1,6 @@
 
 import { HashGenerator } from '@/components/hash-generator'
+import { HashGeneratorDescription } from '@/components/hash-generator-description'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -62,6 +63,7 @@ export default function HashGeneratorPage() {
         <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
           <HashGenerator />
         </Suspense>
+        <HashGeneratorDescription />
       </div>
     </>
   )

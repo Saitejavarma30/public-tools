@@ -1,5 +1,6 @@
 
 import { JsonParser } from '@/components/json-parser'
+import { JsonParserDescription } from '@/components/json-parser-description'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -62,6 +63,7 @@ export default function JsonParserPage() {
         <Suspense fallback={<div className="flex items-center justify-center py-8">Loading...</div>}>
           <JsonParser />
         </Suspense>
+        <JsonParserDescription />
       </div>
     </>
   )
