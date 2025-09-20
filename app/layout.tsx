@@ -4,6 +4,7 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import Script from 'next/script'
 import { MobileNav } from '@/components/mobile-nav'
+import { Navigation } from '@/components/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -69,50 +70,7 @@ export default function RootLayout({
               </div>
               
               {/* Desktop Navigation */}
-              <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a
-                  className="transition-colors hover:text-foreground/80 text-foreground"
-                  href="/regex-tester"
-                >
-                  Regex Tester
-                </a>
-                <a
-                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                  href="/json-parser"
-                >
-                  JSON Parser
-                </a>
-                <a
-                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                  href="/base64-encoder"
-                >
-                  Base64 Tool
-                </a>
-                <a
-                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                  href="/url-encoder"
-                >
-                  URL Encoder
-                </a>
-                <a
-                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                  href="/hash-generator"
-                >
-                  Hash Generator
-                </a>
-                <a
-                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                  href="/color-picker"
-                >
-                  Color Picker
-                </a>
-                <a
-                  className="transition-colors hover:text-foreground/80 text-muted-foreground"
-                  href="/privacy"
-                >
-                  Privacy
-                </a>
-              </nav>
+              <Navigation />
 
               {/* Mobile Navigation */}
               <div className="md:hidden">
